@@ -28,7 +28,7 @@ endif
   let s:base10=['#ffffff', '15']
 " }}}
 
-let s:normal1   = [s:base10[0], s:base0D[0], s:base10[1], s:base0D[1]]
+let s:normal1   = [s:base10[0], s:base09[0], s:base10[1], s:base0D[1]]
 let s:normal2   = [s:base00[0], s:base03[0], s:base00[1], s:base03[1]]
 let s:normal3   = [s:base07[0], s:base00[0], s:base07[1], s:base00[1]]
 let s:inactive1 = [s:base00[0], s:base03[0], s:base00[1], s:base03[1]]
@@ -52,6 +52,7 @@ let s:error     = [s:base00[0], s:base08[0], s:base00[1], s:base08[1]]
 let g:airline#themes#materialmonokai#palette = {}
 
 let g:airline#themes#materialmonokai#palette.inactive = airline#themes#generate_color_map(s:inactive1, s:inactive2, s:inactive3)
+let g:airline#themes#materialmonokai#palette.inactive_modified = {'airline_c': ['#62b3b2','','','','']}
 
 if g:materialmonokai_subtle_airline == 1
   let g:airline#themes#materialmonokai#palette.normal = airline#themes#generate_color_map(s:normal1, s:normal2, s:normal3, s:normal3, s:normal2, s:normal1)
@@ -62,6 +63,7 @@ if g:materialmonokai_subtle_airline == 1
   let g:airline#themes#materialmonokai#palette.visual.airline_error = s:error
 else
   let g:airline#themes#materialmonokai#palette.normal = airline#themes#generate_color_map(s:normal1, s:normal2, s:normal3)
+  let g:airline#themes#materialmonokai#palette.normal_modified = {'airline_c': ['#ffffff','#62b3b2','','','']}
   let g:airline#themes#materialmonokai#palette.insert = airline#themes#generate_color_map(s:insert1, s:insert2, s:insert3)
   let g:airline#themes#materialmonokai#palette.replace = airline#themes#generate_color_map(s:replace1, s:replace2, s:replace3)
   let g:airline#themes#materialmonokai#palette.visual = airline#themes#generate_color_map(s:visual1, s:visual2, s:visual3)
